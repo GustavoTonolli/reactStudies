@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Logo from './componentes/imgs/logo512.png';
 function App() { // function precisa ter o mesmo nome do App.js
+  const nome = 'Gustavo';
+  const curso = () => {
+    return ('ReactJS');
+  }
+
   return (
     <div className="App"> {/* posso executar um bloco sem necessariamente ter uma tag com <>code</> */}
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edite <code>src/App.js</code> e salve para recarregar.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprender React!
-        </a>
-      </header>
+      <p>{'Nome: ' + nome}</p> {/* utilizando codigo JS junto com HTML */}
+      <p>{'Curso: ' + curso()}</p> {/* Retornando string com funcao */}
+      <img src={Logo} alt="logo" /> {/* imagem fora do public */}
+      <img src="logo192.png" alt="logo" /> {/* imagem dentro do public */}
     </div>
 
   );
